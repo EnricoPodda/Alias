@@ -1,3 +1,3 @@
-# NativeScript Project
+# Alias: A NativeScript Project
 
-Works in progress
+Work in progress
