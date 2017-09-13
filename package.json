@@ -1,0 +1,19 @@
+{
+  "main": "app.js",
+  "name": "alias",
+  "version": "0.0.1",
+  "description": "This repo serves as the starting point for NativeScript’s [JavaScript Getting Started Guide](https://docs.nativescript.org/tutorial/chapter-0).",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnricoPodda/Alias.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EnricoPodda/Alias/issues"
+  },
+  "homepage": "https://github.com/EnricoPodda/Alias#readme"
+}

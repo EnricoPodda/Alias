@@ -1,0 +1,6 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="startup" navigatedTo="onNavigatedTo">
+    <GridLayout rows="3*,2*,2*,3*" columns="*">
+        <Button col="0" row="1" text="[[ createGame ]]" tap="createGameTap" />
+        <Button col="0" row="2" text="[[ joinGame ]]" tap="joinGameTap" />
+    </GridLayout>
+</Page>
