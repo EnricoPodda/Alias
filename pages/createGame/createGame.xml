@@ -1,5 +1,5 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="startup" navigatedTo="onNavigatedTo">
-    <GridLayout rows="3*,3*,2*" columns="1*">
+    <GridLayout rows="4*,4*,2*" columns="1*">
         <GridLayout rows="1*,1*,1*,1*" columns="1*,1*" col="0" row="0" id="addGrid">
             <Button text="[[ powerlessGood ]]" tap="addCharacter" col="0" row="0"/>
             <Button text="[[ powerlessEvil ]]" tap="addCharacter" col="1" row="0"/>
@@ -11,8 +11,8 @@
             <Button text="[[ confusedOne ]]" tap="addCharacter" col="1" row="3"/>
         </GridLayout>
         <GridLayout rows="1*,1*,1*,1*" columns="1*,1*" col="0" row="1" id="removeGrid">
-            <Label text="[[ good ]]: 0" tap="removeCharacter" col="0" row="0"/>
-            <Label text="[[ evil ]]: 0" tap="removeCharacter" col="1" row="0"/>
+            <Label text="[[ powerlessGood ]]: 0" tap="removeCharacter" col="0" row="0"/>
+            <Label text="[[ powerlessEvil ]]: 0" tap="removeCharacter" col="1" row="0"/>
             <Label text="[[ seer ]]: 0" tap="removeCharacter" col="0" row="1"/>
             <Label text="[[ antiSeer ]]: 0" tap="removeCharacter" col="1" row="1"/>
             <Label text="[[ seerHelper ]]: 0" tap="removeCharacter" col="0" row="2"/>
@@ -20,6 +20,6 @@
             <Label text="[[ occultedOne ]]: 0" tap="removeCharacter" col="0" row="3"/>
             <Label text="[[ confusedOne ]]: 0" tap="removeCharacter" col="1" row="3"/>
         </GridLayout>
-        <Button text="Prova" tap="" col="0" row="2" />
+        <!--<Button text="Prova" tap="" col="0" row="2" />-->
     </GridLayout>
 </Page>
