@@ -10,7 +10,8 @@ var Themes = require("./themes")
  //Queste sono le varie proprietà che verrano controllate per il rimpiazzo delle lingua
  let tags = [
      "text",
-     "src"
+     "src",
+     "title"
  ]
 
 class Locale  {
