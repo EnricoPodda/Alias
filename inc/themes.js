@@ -49,6 +49,6 @@ exports.avalon = {
  * assassin
  * occultedOne
  * confusedEvil
- * evil
- * good
+ * powerlessGood
+ * powerlessEvil
  */

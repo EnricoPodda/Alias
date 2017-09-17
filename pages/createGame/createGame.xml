@@ -1,24 +1,28 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="startup" navigatedTo="onNavigatedTo">
-    <GridLayout rows="4*,4*,2*" columns="1*">
+    <GridLayout rows="4*,4*,1*,1*" columns="1*">
         <GridLayout rows="1*,1*,1*,1*" columns="1*,1*" col="0" row="0" id="addGrid">
-            <Button text="[[ powerlessGood ]]" tap="addCharacter" col="0" row="0"/>
-            <Button text="[[ powerlessEvil ]]" tap="addCharacter" col="1" row="0"/>
-            <Button text="[[ seer ]]" tap="addCharacter" col="0" row="1"/>
-            <Button text="[[ antiSeer ]]" tap="addCharacter" col="1" row="1"/>
-            <Button text="[[ seerHelper ]]" tap="addCharacter" col="0" row="2"/>
-            <Button text="[[ assassin ]]" tap="addCharacter" col="1" row="2"/>
-            <Button text="[[ occultedOne ]]" tap="addCharacter" col="0" row="3"/>
-            <Button text="[[ confusedOne ]]" tap="addCharacter" col="1" row="3"/>
+            <Button text="[[ powerlessGood ]]" tap="addCharacter" col="0" row="0" character="2" />
+            <Button text="[[ powerlessEvil ]]" tap="addCharacter" col="1" row="0" character="1" />
+            <Button text="[[ seer ]]" tap="addCharacter" col="0" row="1" character="0" />
+            <Button text="[[ antiSeer ]]" tap="addCharacter" col="1" row="1" character="4"/>
+            <Button text="[[ seerHelper ]]" tap="addCharacter" col="0" row="2" character="5"/>
+            <Button text="[[ assassin ]]" tap="addCharacter" col="1" row="2" character="6"/>
+            <Button text="[[ occultedOne ]]" tap="addCharacter" col="0" row="3" character="3"/>
+            <Button text="[[ confusedOne ]]" tap="addCharacter" col="1" row="3" character="7"/>
         </GridLayout>
         <GridLayout rows="1*,1*,1*,1*" columns="1*,1*" col="0" row="1" id="removeGrid">
-            <Label text="[[ powerlessGood ]]: 0" tap="removeCharacter" col="0" row="0"/>
-            <Label text="[[ powerlessEvil ]]: 0" tap="removeCharacter" col="1" row="0"/>
-            <Label text="[[ seer ]]: 0" tap="removeCharacter" col="0" row="1"/>
-            <Label text="[[ antiSeer ]]: 0" tap="removeCharacter" col="1" row="1"/>
-            <Label text="[[ seerHelper ]]: 0" tap="removeCharacter" col="0" row="2"/>
-            <Label text="[[ assassin ]]: 0" tap="removeCharacter" col="1" row="2"/>
-            <Label text="[[ occultedOne ]]: 0" tap="removeCharacter" col="0" row="3"/>
-            <Label text="[[ confusedOne ]]: 0" tap="removeCharacter" col="1" row="3"/>
+            <Label text="[[ powerlessGood ]]: 0" tap="removeCharacter" col="0" row="0" character="1"/>
+            <Label text="[[ powerlessEvil ]]: 0" tap="removeCharacter" col="1" row="0" character="2"/>
+            <Label text="[[ seer ]]: 0" tap="removeCharacter" col="0" row="1" character="0"/>
+            <Label text="[[ antiSeer ]]: 0" tap="removeCharacter" col="1" row="1" character="4"/>
+            <Label text="[[ seerHelper ]]: 0" tap="removeCharacter" col="0" row="2" character="5"/>
+            <Label text="[[ assassin ]]: 0" tap="removeCharacter" col="1" row="2" character="6"/>
+            <Label text="[[ occultedOne ]]: 0" tap="removeCharacter" col="0" row="3" character="3"/>
+            <Label text="[[ confusedOne ]]: 0" tap="removeCharacter" col="1" row="3" character="7"/>
+        </GridLayout>
+        <GridLayout rows="1*" columns="1*,1*" row="2" col="0" >
+            <Label text="[[ blueSide ]]: 0" textWrap="true" row="0" col="0" />
+            <Label text="[[ redSide ]]: 0" textWrap="true" row="0" col="1"/>
         </GridLayout>
         <!--<Button text="Prova" tap="" col="0" row="2" />-->
     </GridLayout>

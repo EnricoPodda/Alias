@@ -1,5 +1,6 @@
 var View = require("ui/core/view")
 var Themes = require("./themes")
+var Utilities = require("~/inc/utilities").Utilities
 
 /**
  * Lo scopo di questa classe è di occuparsi di tutte le sostituzioni dovute al variare della lingua
@@ -17,26 +18,36 @@ var Themes = require("./themes")
 class Locale  {
 
     applyLocale(view) {
-        let locale = Themes[this.getCurrentTheme()][this.getCurrentLanguage()]
-
-        this.getChildren(view).map((child) => {
+        Utilities.getChildren(view).map((child) => {
             tags.filter((tag) => {
-                return (
-                    child[tag] !== undefined
-                )
+                return child[tag] !== undefined
             }).map((tag) => {
-                let tmp = child[tag]
-                while (tmp.includes("[[") && tmp.includes("]]")) {
-                    var varName = tmp.substring(tmp.indexOf("[[")+2,tmp.indexOf("]]"))
-                    if (locale[varName.trim()] !== undefined) {
-                        tmp = tmp.replace("[["+varName+"]]",locale[varName.trim()])
-                    }
-                    else
-                        tmp = tmp.replace("[[","").replace("]]")
-                }
-                child[tag] = tmp
+                this.applyLocaleForTag(child,tag)
             })
         })
+    }
+
+    applyLocaleForTag(view,tag) {
+        let tmp = view[tag]
+        let locale = this.getCurrentLocale()
+        while (tmp.includes("[[") && tmp.includes("]]")) {
+            var varName = tmp.substring(tmp.indexOf("[[")+2,tmp.indexOf("]]"))
+            if (locale[varName.trim()] !== undefined) {
+                tmp = tmp.replace("[["+varName+"]]",locale[varName.trim()])
+            }
+            else
+                tmp = tmp.replace("[[","").replace("]]")
+        }
+        view[tag] = tmp
+    }
+
+    localeToVar(text) {
+        let locale = this.getCurrentLocale()
+        return Utilities.invertObject(locale)[text]
+    }
+
+    getCurrentLocale() {
+        return Themes[this.getCurrentTheme()][this.getCurrentLanguage()]
     }
 
     getCurrentLanguage() {
@@ -47,15 +58,6 @@ class Locale  {
     getCurrentTheme() {
         //TODO
         return "avalon"
-    }
-
-    getChildren(view) {
-        let result = []
-        view.eachChild((child) => {
-            result.push(child)
-            result.push(...this.getChildren(child))
-        })
-        return result
     }
 }
 

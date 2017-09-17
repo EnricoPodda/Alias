@@ -1,4 +1,13 @@
-<Page xmlns="http://schemas.natiescript.org/tns.xsd" actionBarHidden="true" loaded="startup">
+<Page xmlns="http://schemas.natiescript.org/tns.xsd" loaded="startup">
+  <Page.actionBar>
+      <ActionBar title="[[ title ]]" icon="">
+          <NavigationButton text="Back" icon="" tap="" />
+          <ActionBar.actionItems>
+              <ActionItem icon="" text="Test1" tap="" ios.position="left" />
+              <ActionItem icon="" text="Test2" tap="" ios.position="right" />
+          </ActionBar.actionItems>
+      </ActionBar>
+  </Page.actionBar>
   <GridLayout columns="*" rows="4*, 1*, 1*, 1*, 1*">
 
     <Label col="0" row="0" textWrap="true" text="[[ title ]]"/>
